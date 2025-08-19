@@ -1,0 +1,316 @@
+# README — VTOL Rocket Simulator (progress snapshot)
+
+## Status — implemented so far
+
+* Dockerized ROS 2 Humble development container (image `osrf/ros:humble-desktop`) running on host.
+* ROS 2 environment inside container: `colcon`, `rosdep` initialized, demo nodes verified (`talker` / `listener`).
+* Gazebo Classic (11) GUI launched from inside container; ROS↔Gazebo bridge functional.
+* Basic spawn pipeline validated:
+
+  * Patched `spawn_entity.py` logging bug to avoid crashes.
+  * Spawned a custom `/tmp/cube.sdf` into the running Gazebo world successfully.
+  * Cloned `osrf/gazebo_models` into container and placed models under `/root/.gazebo/models` for offline spawns.
+* Local colcon workspace `~/ros2_ws` created (empty packages scaffolded earlier).
+
+---
+
+# How to reproduce the current stage (full, exact commands)
+
+> Run these on your **host** (not inside container) unless stated.
+
+### 0 — (If Docker not installed)
+
+```bash
+# install Docker CE (if not already)
+sudo apt remove docker docker-engine docker.io containerd runc -y
+sudo apt update
+sudo apt install ca-certificates curl gnupg lsb-release -y
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+  | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+# make docker usable without sudo (logout/login required)
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+### 1 — Pull and run the ROS2 container (host)
+
+```bash
+docker pull osrf/ros:humble-desktop
+
+# recommended run command — maps X11, mounts workspace, exposes network for ROS2, names the container
+docker run -it --name ros2_sim \
+  --net=host \
+  --env="DISPLAY=$DISPLAY" \
+  --env="QT_X11_NO_MITSHM=1" \
+  --env="XAUTHORITY=$XAUTHORITY" \
+  --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
+  --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+  --volume="$HOME/ros2_ws:/root/ros2_ws:rw" \
+  osrf/ros:humble-desktop \
+  bash
+```
+
+(If you prefer reuse instead of recreate: `docker start ros2_sim` then `docker exec -it ros2_sim bash`.)
+
+### 2 — Inside container: basic setup & workspace
+
+```bash
+# inside container shell
+apt update
+apt install -y python3-rosdep python3-colcon-common-extensions git wget vim  # nano optional
+# rosdep: if already initialized, rosdep update is enough
+rosdep update
+
+# create workspace (if not already)
+mkdir -p /root/ros2_ws/src
+cd /root/ros2_ws
+colcon build        # may be no-op if no packages
+source /opt/ros/humble/setup.bash
+# source workspace after build (if packages exist)
+[ -f install/setup.bash ] && source install/setup.bash
+```
+
+### 3 — Launch Gazebo with ROS2 bridge (keep this running)
+
+```bash
+# inside container (terminal A)
+source /opt/ros/humble/setup.bash
+[ -f /root/ros2_ws/install/setup.bash ] && source /root/ros2_ws/install/setup.bash
+ros2 launch gazebo_ros gazebo.launch.py
+```
+
+### 4 — Spawn a test cube into Gazebo (terminal B — attach to same container)
+
+```bash
+# from host: attach a second shell if needed
+docker exec -it ros2_sim bash
+
+# inside container (terminal B):
+source /opt/ros/humble/setup.bash
+[ -f /root/ros2_ws/install/setup.bash ] && source /root/ros2_ws/install/setup.bash
+
+# Create a simple cube SDF and spawn it
+cat > /tmp/cube.sdf <<'EOF'
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="cube">
+    <static>false</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry><box><size>1 1 1</size></box></geometry>
+      </collision>
+      <visual name="visual">
+        <geometry><box><size>1 1 1</size></box></geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
+EOF
+
+ros2 run gazebo_ros spawn_entity.py -entity cube1 -file /tmp/cube.sdf
+```
+
+### 5 — Run the demo talker/listener (two terminals)
+
+* Terminal A (inside container):
+
+  ```bash
+  source /opt/ros/humble/setup.bash
+  ros2 run demo_nodes_cpp talker
+  ```
+* Terminal B (attach another shell):
+
+  ```bash
+  docker exec -it ros2_sim bash
+  source /opt/ros/humble/setup.bash
+  ros2 run demo_nodes_cpp listener
+  ```
+
+### 6 — Add model collection for offline spawn (optional, recommended)
+
+```bash
+# inside container
+mkdir -p /root/.gazebo/models
+git clone --depth 1 https://github.com/osrf/gazebo_models /tmp/gz_models
+cp -r /tmp/gz_models/* /root/.gazebo/models/
+echo 'export GAZEBO_MODEL_PATH=/root/.gazebo/models:/usr/share/gazebo-11/models' >> ~/.bashrc
+source ~/.bashrc
+
+# spawn a packaged model that exists
+ros2 run gazebo_ros spawn_entity.py -entity box1 -file /root/.gazebo/models/cardboard_box/model.sdf
+```
+
+### 7 — Patch `spawn_entity.py` logger bug (if necessary)
+
+```bash
+# inside container (one-liner patch)
+sed -i 's/self.get_logger().error(.*%s.*)/self.get_logger().error(f"Error: specified file {self.args.file} does not exist")/' /opt/ros/humble/lib/gazebo_ros/spawn_entity.py
+```
+
+(Confirm patch: `sed -n '1,220p' /opt/ros/humble/lib/gazebo_ros/spawn_entity.py | sed -n '130,150p'`)
+
+### 8 — To stop / restart later
+
+```bash
+# from host:
+docker stop ros2_sim             # stops container
+docker start ros2_sim            # start again
+docker exec -it ros2_sim bash   # re-attach and source as above
+```
+
+---
+
+# Errors, issues encountered, and how they were resolved (detailed)
+
+1. **Ubuntu 24.04 vs ROS 2 Humble package mismatch**
+
+   * Symptom: `python3-rosdep2` and `python3-colcon-common-extensions` not available on host apt.
+   * Cause: Humble builds target Jammy (22.04); 24.04 upstream apt indexes differ.
+   * Resolution: Use Docker images based on Jammy (`osrf/ros:humble-desktop`) to avoid host package incompatibilities. Container isolates all ROS/Gazebo binaries.
+
+2. **Docker missing initially**
+
+   * Symptom: `docker` command not found.
+   * Fix: Installed Docker CE from official repo (commands provided above), verified with `docker run hello-world`.
+
+3. **Wrong Docker image tag attempts**
+
+   * Symptom: `docker pull ros:humble-desktop` returned manifest not found.
+   * Fix: Use correct repository `osrf/ros:humble-desktop` or other `osrf/ros` tags. `ros` namespace is incorrect.
+
+4. **Inside-container `docker` command unavailable**
+
+   * Symptom: `docker` not found when executed inside running container.
+   * Explanation: Docker daemon runs on host; do not attempt to control Docker from within unprivileged container. Use host terminal for Docker commands.
+
+5. **Need to `source` ROS environment after attaching**
+
+   * Symptom: `ros2: command not found` in `docker exec` shell.
+   * Fix: Always run `source /opt/ros/humble/setup.bash` and `source /root/ros2_ws/install/setup.bash` (if workspace built). Add lines to `~/.bashrc` to auto-source inside container.
+
+6. **Gazebo GUI warnings (ALSA/amdgpu)**
+
+   * Observed messages: ALSA / amdgpu warnings in logs.
+   * Explanation: Harmless in containerized environment; audio/GPU passthrough not required for functionality. Ignored.
+
+7. **`spawn_entity_demo.launch.py` hung waiting for online model DB**
+
+   * Symptom: spawn node waited indefinitely for service or resource.
+   * Cause: demo tried to fetch models from Gazebo online database; container lacked network access or model not available.
+   * Fixes:
+
+     * Spawn local SDF/URDF manually (`/tmp/cube.sdf` worked).
+     * Clone `osrf/gazebo_models` into `/root/.gazebo/models` for offline models and set `GAZEBO_MODEL_PATH`.
+     * Alternatively ensure network access to `models.gazebosim.org` (not recommended for reproducible CI).
+
+8. **`spawn_entity.py` crash: `TypeError: RcutilsLogger.error() takes 2 positional arguments but 3 were given`**
+
+   * Cause: `spawn_entity.py` used a C-style printf logger signature (`self.get_logger().error('... %s', arg)`), but `rclpy` logger in this distro expects a single formatted string.
+   * Fix: Patch file in-place to use f-string formatting:
+
+     ```bash
+     sed -i '143s/self.get_logger().error.*/self.get_logger().error(f"Error: specified file {self.args.file} does not exist")/' /opt/ros/humble/lib/gazebo_ros/spawn_entity.py
+     ```
+   * Result: instead of crashing, `spawn_entity.py` logs a clean error when file missing.
+
+9. **Model file paths differ**
+
+   * Symptom: spawn fails with “file does not exist”.
+   * Cause: shipped Gazebo Classic in the image only contains `ground_plane` and `sun` under `/usr/share/gazebo-11/models`. Many other models must be fetched or added.
+   * Mitigation: add `osrf/gazebo_models` locally and spawn from `/root/.gazebo/models/<model>/model.sdf` or create simple SDFs under `/tmp`.
+
+10. **Attempted apt install of `gazebo11` inside Jammy-based container failed**
+
+    * Explanation: OSRF stopped shipping `gazebo11` on newer repos; container already had Gazebo 11 from Ubuntu packages — no need to add OSRF package for `gazebo11`. Use the shipped `/usr/share/gazebo-11/models` or add local models.
+
+---
+
+# Quick reference — useful commands
+
+Host:
+
+```bash
+# list running containers
+docker ps
+
+# start existing container
+docker start ros2_sim
+
+# attach
+docker exec -it ros2_sim bash
+
+# stop
+docker stop ros2_sim
+```
+
+Inside container (after `docker exec`):
+
+```bash
+# always source
+source /opt/ros/humble/setup.bash
+[ -f /root/ros2_ws/install/setup.bash ] && source /root/ros2_ws/install/setup.bash
+
+# build workspace
+cd /root/ros2_ws
+colcon build
+
+# launch Gazebo
+ros2 launch gazebo_ros gazebo.launch.py
+
+# spawn entity
+ros2 run gazebo_ros spawn_entity.py -entity cube1 -file /tmp/cube.sdf
+
+# run demo nodes
+ros2 run demo_nodes_cpp talker
+ros2 run demo_nodes_cpp listener
+
+# delete spawned entity
+ros2 service call /delete_entity gazebo_msgs/srv/DeleteEntity "{name: cube1}"
+```
+
+Patch `spawn_entity.py` (if you ever see the logger crash again):
+
+```bash
+sed -i 's/self.get_logger().error(.*%s.*)/self.get_logger().error(f"Error: specified file {self.args.file} does not exist")/' /opt/ros/humble/lib/gazebo_ros/spawn_entity.py
+```
+
+Add offline models (do once inside container):
+
+```bash
+mkdir -p /root/.gazebo/models
+git clone --depth 1 https://github.com/osrf/gazebo_models /tmp/gz_models
+cp -r /tmp/gz_models/* /root/.gazebo/models/
+echo 'export GAZEBO_MODEL_PATH=/root/.gazebo/models:/usr/share/gazebo-11/models' >> ~/.bashrc
+source ~/.bashrc
+```
+
+---
+
+# Next immediate development steps (short checklist)
+
+1. Create `sim/` C++ package and implement Phase 1 point-mass vertical dynamics.
+2. Create `gnc/control/pid_alt` node (C++) and test with the cube spawn as visual reference.
+3. Add ROS messages under `msg/` and commit initial repository snapshot and GitHub Actions CI skeleton.
+4. Dockerfile: bake the in-container setup into a custom image (install git, colcon, rosdep, patch script for `spawn_entity.py`, copy example SDFs). Use this image for CI.
+
+---
+
+# File & path map (current)
+
+* Host `~/ros2_ws` → mounted into container as `/root/ros2_ws` (workspace).
+* Inside container:
+
+  * ROS2 location: `/opt/ros/humble`
+  * Gazebo models (system): `/usr/share/gazebo-11/models` (contains `ground_plane`, `sun`)
+  * Local offline models (cloned): `/root/.gazebo/models`
+  * Patched script: `/opt/ros/humble/lib/gazebo_ros/spawn_entity.py`
+  * Temporary custom SDF used: `/tmp/cube.sdf`
+
+---
+
+Use the commands above exactly to return to the same state after a reboot. End.
