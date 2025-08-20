@@ -1,0 +1,8 @@
+# Build and log folders
+build/
+install/
+log/
+
+# Other
+*.swp
+*~
