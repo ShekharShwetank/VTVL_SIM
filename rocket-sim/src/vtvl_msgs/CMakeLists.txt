@@ -29,6 +29,7 @@ endif()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/VehicleState.msg"
+  "msg/ActuatorControls.msg"
   DEPENDENCIES std_msgs geometry_msgs
 )
 

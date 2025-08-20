@@ -7,7 +7,7 @@
   ],
   "workspaceMount": "source=${localWorkspaceFolder},target=/${localWorkspaceFolderBasename},type=bind",
   "workspaceFolder": "/${localWorkspaceFolderBasename}",
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y --no-install-recommends gazebo11 ros-humble-gazebo-ros-pkgs && rosdep install -i --from-path src --rosdistro humble -y",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y --no-install-recommends gazebo ros-humble-gazebo-ros-pkgs",
   "mounts": [
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/ubuntu/.bash_history,type=bind"
   ]
