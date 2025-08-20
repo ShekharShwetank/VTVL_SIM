@@ -27,13 +27,30 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
-# --- Add PID Altitude Controller ---
-add_executable(pid_alt_controller src/pid_alt_controller.cpp)
-ament_target_dependencies(pid_alt_controller rclcpp std_msgs vtvl_msgs)
+# --- Add Planar Controller ---
+add_executable(planar_controller src/planar_controller.cpp)
+ament_target_dependencies(planar_controller rclcpp vtvl_msgs geometry_msgs)
 
 install(TARGETS
-  pid_alt_controller
+  planar_controller
   DESTINATION lib/${PROJECT_NAME}
+)
+
+# Install launch files
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+# Install world and model files
+install(DIRECTORY
+  ../../worlds
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+install(DIRECTORY
+  ../../models
+  DESTINATION share/${PROJECT_NAME}/
 )
 
 if(BUILD_TESTING)

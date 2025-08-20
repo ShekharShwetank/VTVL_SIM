@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="simple_rocket">
+    <static>false</static>
+    <link name="base_link">
+      <kinematic>true</kinematic>
+      <pose>0 0 0.5 0 0 0</pose>
+      <visual name="visual_cylinder">
+        <geometry>
+          <cylinder>
+            <radius>0.2</radius>
+            <length>1.0</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+          <diffuse>0.9 0.9 0.9 1</diffuse>
+        </material>
+      </visual>
+      <visual name="visual_cone">
+        <pose>0 0 0.75 0 0 0</pose>
+        <geometry>
+          <cone>
+            <radius>0.2</radius>
+            <length>0.5</length>
+          </cone>
+        </geometry>
+        <material>
+          <ambient>0.9 0.1 0.1 1</ambient>
+          <diffuse>1.0 0.2 0.2 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

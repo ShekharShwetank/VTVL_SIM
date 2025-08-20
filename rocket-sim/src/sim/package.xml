@@ -20,4 +20,6 @@
   <depend>std_msgs</depend>
   <depend>vtvl_msgs</depend>
   <depend>geometry_msgs</depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
 </package>
