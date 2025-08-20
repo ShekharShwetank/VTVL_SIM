@@ -1,0 +1,1 @@
+/root/rocket-sim/build/vtvl_msgs/rosidl_typesupport_fastrtps_c/vtvl_msgs/msg/detail/vehicle_state__rosidl_typesupport_fastrtps_c.h

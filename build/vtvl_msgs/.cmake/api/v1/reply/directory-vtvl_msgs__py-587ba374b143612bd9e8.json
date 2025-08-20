@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "vtvl_msgs__py",
+		"source" : "/root/rocket-sim/build/vtvl_msgs/vtvl_msgs__py"
+	}
+}

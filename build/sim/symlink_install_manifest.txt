@@ -1,0 +1,17 @@
+/root/rocket-sim/install/sim/lib/sim/sim_dynamics
+/root/rocket-sim/install/sim/lib/sim/pid_alt_controller
+/root/rocket-sim/install/sim/share/ament_index/resource_index/package_run_dependencies/sim
+/root/rocket-sim/install/sim/share/ament_index/resource_index/parent_prefix_path/sim
+/root/rocket-sim/install/sim/share/sim/environment/ament_prefix_path.sh
+/root/rocket-sim/install/sim/share/sim/environment/ament_prefix_path.dsv
+/root/rocket-sim/install/sim/share/sim/environment/path.sh
+/root/rocket-sim/install/sim/share/sim/environment/path.dsv
+/root/rocket-sim/install/sim/share/sim/local_setup.bash
+/root/rocket-sim/install/sim/share/sim/local_setup.sh
+/root/rocket-sim/install/sim/share/sim/local_setup.zsh
+/root/rocket-sim/install/sim/share/sim/local_setup.dsv
+/root/rocket-sim/install/sim/share/sim/package.dsv
+/root/rocket-sim/install/sim/share/ament_index/resource_index/packages/sim
+/root/rocket-sim/install/sim/share/sim/cmake/simConfig.cmake
+/root/rocket-sim/install/sim/share/sim/cmake/simConfig-version.cmake
+/root/rocket-sim/install/sim/share/sim/package.xml

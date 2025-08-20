@@ -1,0 +1,52 @@
+[0.020s] Invoking command in '/root/rocket-sim/build/sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/rocket-sim/src/sim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/rocket-sim/install/sim
+[0.902s] -- The C compiler identification is GNU 11.4.0
+[1.334s] -- The CXX compiler identification is GNU 11.4.0
+[1.347s] -- Detecting C compiler ABI info
+[1.464s] -- Detecting C compiler ABI info - done
+[1.469s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.470s] -- Detecting C compile features
+[1.471s] -- Detecting C compile features - done
+[1.476s] -- Detecting CXX compiler ABI info
+[1.564s] -- Detecting CXX compiler ABI info - done
+[1.570s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.570s] -- Detecting CXX compile features
+[1.570s] -- Detecting CXX compile features - done
+[1.575s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.713s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.779s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.837s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.920s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.920s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/root/rocket-sim/src/sim/include>
+[1.920s] -- Configured cppcheck exclude dirs and/or files: 
+[1.922s] -- Added test 'lint_cmake' to check CMake code style
+[1.924s] -- Added test 'uncrustify' to check C / C++ code style
+[1.924s] -- Configured uncrustify additional arguments: 
+[1.925s] -- Added test 'xmllint' to check XML markup files
+[1.928s] -- Configuring done
+[1.932s] -- Generating done
+[1.934s] -- Build files have been written to: /root/rocket-sim/build/sim
+[1.938s] Invoked command in '/root/rocket-sim/build/sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /root/rocket-sim/src/sim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/rocket-sim/install/sim
+[1.939s] Invoking command in '/root/rocket-sim/build/sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/rocket-sim/build/sim -- -j16 -l16
+[1.981s] [ 50%] [32mBuilding CXX object CMakeFiles/sim_dynamics.dir/src/sim_dynamics.cpp.o[0m
+[2.045s] [100%] [32m[1mLinking CXX executable sim_dynamics[0m
+[2.084s] [100%] Built target sim_dynamics
+[2.094s] Invoked command in '/root/rocket-sim/build/sim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /root/rocket-sim/build/sim -- -j16 -l16
+[2.103s] Invoking command in '/root/rocket-sim/build/sim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /root/rocket-sim/build/sim
+[2.110s] -- Install configuration: ""
+[2.110s] -- Execute custom install script
+[2.110s] -- Symlinking: /root/rocket-sim/install/sim/lib/sim/sim_dynamics
+[2.118s] -- Symlinking: /root/rocket-sim/install/sim/share/ament_index/resource_index/package_run_dependencies/sim
+[2.126s] -- Symlinking: /root/rocket-sim/install/sim/share/ament_index/resource_index/parent_prefix_path/sim
+[2.134s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/environment/ament_prefix_path.sh
+[2.142s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/environment/ament_prefix_path.dsv
+[2.150s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/environment/path.sh
+[2.157s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/environment/path.dsv
+[2.165s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/local_setup.bash
+[2.172s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/local_setup.sh
+[2.180s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/local_setup.zsh
+[2.188s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/local_setup.dsv
+[2.196s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/package.dsv
+[2.204s] -- Symlinking: /root/rocket-sim/install/sim/share/ament_index/resource_index/packages/sim
+[2.212s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/cmake/simConfig.cmake
+[2.220s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/cmake/simConfig-version.cmake
+[2.228s] -- Symlinking: /root/rocket-sim/install/sim/share/sim/package.xml

@@ -1,0 +1,6 @@
+{
+  "package_name": "vtvl_msgs",
+  "non_idl_tuples": [
+    "/root/rocket-sim/src/vtvl_msgs:msg/VehicleState.msg"
+  ]
+}
