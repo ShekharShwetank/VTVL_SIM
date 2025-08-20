@@ -1,0 +1,11 @@
+/root/rocket-sim/build/sim/CMakeFiles/uninstall.dir
+/root/rocket-sim/build/sim/CMakeFiles/sim_uninstall.dir
+/root/rocket-sim/build/sim/CMakeFiles/sim_dynamics.dir
+/root/rocket-sim/build/sim/CMakeFiles/pid_alt_controller.dir
+/root/rocket-sim/build/sim/CMakeFiles/test.dir
+/root/rocket-sim/build/sim/CMakeFiles/edit_cache.dir
+/root/rocket-sim/build/sim/CMakeFiles/rebuild_cache.dir
+/root/rocket-sim/build/sim/CMakeFiles/list_install_components.dir
+/root/rocket-sim/build/sim/CMakeFiles/install.dir
+/root/rocket-sim/build/sim/CMakeFiles/install/local.dir
+/root/rocket-sim/build/sim/CMakeFiles/install/strip.dir

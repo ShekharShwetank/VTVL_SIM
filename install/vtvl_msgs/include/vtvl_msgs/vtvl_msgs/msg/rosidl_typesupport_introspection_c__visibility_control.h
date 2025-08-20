@@ -1,0 +1,1 @@
+/root/rocket-sim/build/vtvl_msgs/rosidl_typesupport_introspection_c/vtvl_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h

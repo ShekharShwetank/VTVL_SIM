@@ -1,0 +1,43 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from vtvl_msgs/msg/VehicleState.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "geometry_msgs/msg/Quaternion.idl"
+#include "geometry_msgs/msg/Vector3.idl"
+#include "std_msgs/msg/Header.idl"
+
+module vtvl_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "VehicleState.msg: rocket state vector (positions, velocities, attitude, rates)")
+    struct VehicleState {
+      @verbatim (language="comment", text=
+        "Header to track timestamp and frame ID")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Translational State in Inertial Frame" "\n"
+        "Inertial position (x, y, z) in meters")
+      geometry_msgs::msg::Point position;
+
+      @verbatim (language="comment", text=
+        "Inertial velocity (vx, vy, vz) in m/s")
+      geometry_msgs::msg::Vector3 velocity;
+
+      @verbatim (language="comment", text=
+        "Rotational State" "\n"
+        "Orientation as a quaternion (x, y, z, w)")
+      geometry_msgs::msg::Quaternion attitude;
+
+      @verbatim (language="comment", text=
+        "Body frame angular rates (wx, wy, wz) in rad/s")
+      geometry_msgs::msg::Vector3 angular_velocity;
+
+      @verbatim (language="comment", text=
+        "Mass Properties" "\n"
+        "Current total mass in kg")
+      double mass;
+    };
+  };
+};

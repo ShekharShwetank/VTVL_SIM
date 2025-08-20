@@ -1,0 +1,286 @@
+[0.000000] (-) TimerEvent: {}
+[0.000541] (vtvl_msgs) JobQueued: {'identifier': 'vtvl_msgs', 'dependencies': OrderedDict()}
+[0.000624] (sim) JobQueued: {'identifier': 'sim', 'dependencies': OrderedDict([('vtvl_msgs', '/root/rocket-sim/install/vtvl_msgs')])}
+[0.000675] (vtvl_msgs) JobStarted: {'identifier': 'vtvl_msgs'}
+[0.009067] (vtvl_msgs) JobProgress: {'identifier': 'vtvl_msgs', 'progress': 'cmake'}
+[0.009537] (vtvl_msgs) JobProgress: {'identifier': 'vtvl_msgs', 'progress': 'build'}
+[0.010200] (vtvl_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/rocket-sim/build/vtvl_msgs', '--', '-j16', '-l16'], 'cwd': '/root/rocket-sim/build/vtvl_msgs', 'env': OrderedDict([('HOSTNAME', 'ank-Victus-by-HP-Gaming-Laptop-15-fb0xxx'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/rocket-sim/install/vtvl_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/root/rocket-sim'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/root/rocket-sim/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/rocket-sim/install/vtvl_msgs:/root/rocket-sim/install/sim:/opt/ros/humble'), ('PWD', '/root/rocket-sim/build/vtvl_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/rocket-sim/install/vtvl_msgs:/root/rocket-sim/install/sim:/opt/ros/humble')]), 'shell': False}
+[0.048674] (vtvl_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vtvl_msgs__rosidl_generator_c\x1b[0m\n'}
+[0.057492] (vtvl_msgs) StdoutLine: {'line': b'[  3%] Built target vtvl_msgs__cpp\n'}
+[0.059365] (vtvl_msgs) StdoutLine: {'line': b'[ 12%] Built target vtvl_msgs__rosidl_generator_c\n'}
+[0.064373] (vtvl_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_symlink_vtvl_msgs\n'}
+[0.066923] (vtvl_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vtvl_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[0.067091] (vtvl_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vtvl_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[0.067226] (vtvl_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vtvl_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[0.068638] (vtvl_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vtvl_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[0.068744] (vtvl_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vtvl_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[0.068835] (vtvl_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vtvl_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[0.079289] (vtvl_msgs) StdoutLine: {'line': b'[ 41%] Built target vtvl_msgs__rosidl_typesupport_c\n'}
+[0.079488] (vtvl_msgs) StdoutLine: {'line': b'[ 41%] Built target vtvl_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.079562] (vtvl_msgs) StdoutLine: {'line': b'[ 41%] Built target vtvl_msgs__rosidl_typesupport_cpp\n'}
+[0.079662] (vtvl_msgs) StdoutLine: {'line': b'[ 51%] Built target vtvl_msgs__rosidl_typesupport_introspection_c\n'}
+[0.079850] (vtvl_msgs) StdoutLine: {'line': b'[ 61%] Built target vtvl_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.080818] (vtvl_msgs) StdoutLine: {'line': b'[ 70%] Built target vtvl_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.099773] (vtvl_msgs) StdoutLine: {'line': b'[ 70%] Built target vtvl_msgs\n'}
+[0.099910] (-) TimerEvent: {}
+[0.119540] (vtvl_msgs) StdoutLine: {'line': b'[ 74%] Built target vtvl_msgs__py\n'}
+[0.129213] (vtvl_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vtvl_msgs__rosidl_generator_py\x1b[0m\n'}
+[0.141637] (vtvl_msgs) StdoutLine: {'line': b'[ 80%] Built target vtvl_msgs__rosidl_generator_py\n'}
+[0.151229] (vtvl_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vtvl_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[0.151387] (vtvl_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vtvl_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[0.151450] (vtvl_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vtvl_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[0.163851] (vtvl_msgs) StdoutLine: {'line': b'[ 93%] Built target vtvl_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.164047] (vtvl_msgs) StdoutLine: {'line': b'[ 96%] Built target vtvl_msgs__rosidl_typesupport_c__pyext\n'}
+[0.164113] (vtvl_msgs) StdoutLine: {'line': b'[100%] Built target vtvl_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.199983] (-) TimerEvent: {}
+[0.242036] (vtvl_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.242492] (vtvl_msgs) StdoutLine: {'line': b'writing vtvl_msgs.egg-info/PKG-INFO\n'}
+[0.242681] (vtvl_msgs) StdoutLine: {'line': b'writing dependency_links to vtvl_msgs.egg-info/dependency_links.txt\n'}
+[0.243429] (vtvl_msgs) StdoutLine: {'line': b'writing top-level names to vtvl_msgs.egg-info/top_level.txt\n'}
+[0.245124] (vtvl_msgs) StdoutLine: {'line': b"reading manifest file 'vtvl_msgs.egg-info/SOURCES.txt'\n"}
+[0.245628] (vtvl_msgs) StdoutLine: {'line': b"writing manifest file 'vtvl_msgs.egg-info/SOURCES.txt'\n"}
+[0.267360] (vtvl_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_vtvl_msgs_egg\n'}
+[0.278553] (vtvl_msgs) CommandEnded: {'returncode': 0}
+[0.279092] (vtvl_msgs) JobProgress: {'identifier': 'vtvl_msgs', 'progress': 'install'}
+[0.286838] (vtvl_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/rocket-sim/build/vtvl_msgs'], 'cwd': '/root/rocket-sim/build/vtvl_msgs', 'env': OrderedDict([('HOSTNAME', 'ank-Victus-by-HP-Gaming-Laptop-15-fb0xxx'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/rocket-sim/install/vtvl_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/root/rocket-sim'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/root/rocket-sim/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/rocket-sim/install/vtvl_msgs:/root/rocket-sim/install/sim:/opt/ros/humble'), ('PWD', '/root/rocket-sim/build/vtvl_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/rocket-sim/install/vtvl_msgs:/root/rocket-sim/install/sim:/opt/ros/humble')]), 'shell': False}
+[0.294308] (vtvl_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.294718] (vtvl_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.294914] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/ament_index/resource_index/rosidl_interfaces/vtvl_msgs\n'}
+[0.295265] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/detail/vehicle_state__functions.h\n'}
+[0.295373] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/detail/vehicle_state__struct.h\n'}
+[0.295476] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/detail/vehicle_state__type_support.h\n'}
+[0.295572] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.295668] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/vehicle_state.h\n'}
+[0.295826] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/environment/library_path.sh\n'}
+[0.295949] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/environment/library_path.dsv\n'}
+[0.296312] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/detail/vehicle_state__rosidl_typesupport_fastrtps_c.h\n'}
+[0.296423] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.296696] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h\n'}
+[0.296816] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.297120] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/detail/vehicle_state__builder.hpp\n'}
+[0.297225] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/detail/vehicle_state__struct.hpp\n'}
+[0.297327] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/detail/vehicle_state__traits.hpp\n'}
+[0.297427] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/detail/vehicle_state__type_support.hpp\n'}
+[0.297522] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.297615] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/vehicle_state.hpp\n'}
+[0.298008] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/detail/vehicle_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.298111] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.298361] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/include/vtvl_msgs/vtvl_msgs/msg/detail/vehicle_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.298489] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/environment/pythonpath.sh\n'}
+[0.298606] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/environment/pythonpath.dsv\n'}
+[0.298858] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.298956] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.299054] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.299152] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.299703] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/__init__.py\n'}
+[0.299810] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/_vtvl_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.299907] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/_vtvl_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.300002] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/_vtvl_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.300044] (-) TimerEvent: {}
+[0.300126] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/libvtvl_msgs__rosidl_generator_py.so\n'}
+[0.300246] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/msg/__init__.py\n'}
+[0.300357] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/msg/_vehicle_state.py\n'}
+[0.300433] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/msg/_vehicle_state_s.c\n'}
+[0.300511] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/vtvl_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.300606] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/vtvl_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.300709] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/vtvl_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.300944] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/vtvl_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.301159] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/vtvl_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.301449] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/vtvl_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.301533] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/msg/VehicleState.idl\n'}
+[0.301627] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/msg/VehicleState.msg\n'}
+[0.301793] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/ament_index/resource_index/package_run_dependencies/vtvl_msgs\n'}
+[0.301939] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/ament_index/resource_index/parent_prefix_path/vtvl_msgs\n'}
+[0.302061] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/environment/ament_prefix_path.sh\n'}
+[0.302176] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/environment/ament_prefix_path.dsv\n'}
+[0.302314] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/environment/path.sh\n'}
+[0.302438] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/environment/path.dsv\n'}
+[0.302553] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/local_setup.bash\n'}
+[0.302667] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/local_setup.sh\n'}
+[0.302795] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/local_setup.zsh\n'}
+[0.302910] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/local_setup.dsv\n'}
+[0.302991] (vtvl_msgs) StdoutLine: {'line': b'-- Symlinking: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/package.dsv\n'}
+[0.311195] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/ament_index/resource_index/packages/vtvl_msgs\n'}
+[0.311347] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.311496] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.311644] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.311800] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.311948] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.312065] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.312177] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.312296] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/vtvl_msgsConfig.cmake\n'}
+[0.312388] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/vtvl_msgsConfig-version.cmake\n'}
+[0.312499] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/package.xml\n'}
+[0.312697] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/lib/libvtvl_msgs__rosidl_generator_c.so\n'}
+[0.312969] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/lib/libvtvl_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.313216] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/lib/libvtvl_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.313444] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/lib/libvtvl_msgs__rosidl_typesupport_c.so\n'}
+[0.313679] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/lib/libvtvl_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.313946] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/lib/libvtvl_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.314186] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/lib/libvtvl_msgs__rosidl_typesupport_cpp.so\n'}
+[0.339954] (vtvl_msgs) StdoutLine: {'line': b"Listing '/root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs'...\n"}
+[0.340079] (vtvl_msgs) StdoutLine: {'line': b"Listing '/root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages/vtvl_msgs/msg'...\n"}
+[0.343121] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/lib/libvtvl_msgs__rosidl_generator_py.so\n'}
+[0.343397] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/export_vtvl_msgs__rosidl_generator_cExport.cmake\n'}
+[0.343523] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/export_vtvl_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.343628] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/export_vtvl_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.343700] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/export_vtvl_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.343805] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/vtvl_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.343883] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/vtvl_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.343979] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/vtvl_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.344062] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/vtvl_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.344142] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/export_vtvl_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.344216] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/export_vtvl_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.344285] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/export_vtvl_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.344359] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/vtvl_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.344415] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/vtvl_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.344493] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/vtvl_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.344551] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/vtvl_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.344627] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/export_vtvl_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.344689] (vtvl_msgs) StdoutLine: {'line': b'-- Up-to-date: /root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake/export_vtvl_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.346647] (vtvl_msgs) CommandEnded: {'returncode': 0}
+[0.364641] (vtvl_msgs) JobEnded: {'identifier': 'vtvl_msgs', 'rc': 0}
+[0.365029] (sim) JobStarted: {'identifier': 'sim'}
+[0.372775] (sim) JobProgress: {'identifier': 'sim', 'progress': 'cmake'}
+[0.373269] (sim) JobProgress: {'identifier': 'sim', 'progress': 'build'}
+[0.373590] (sim) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/rocket-sim/build/sim', '--', '-j16', '-l16'], 'cwd': '/root/rocket-sim/build/sim', 'env': OrderedDict([('HOSTNAME', 'ank-Victus-by-HP-Gaming-Laptop-15-fb0xxx'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/rocket-sim/install/vtvl_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/root/rocket-sim'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/root/rocket-sim/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/rocket-sim/install/vtvl_msgs:/root/rocket-sim/install/sim:/opt/ros/humble'), ('PWD', '/root/rocket-sim/build/sim'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/rocket-sim/install/vtvl_msgs:/root/rocket-sim/install/sim:/opt/ros/humble')]), 'shell': False}
+[0.395347] (sim) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.400115] (-) TimerEvent: {}
+[0.488753] (sim) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.498888] (sim) StdoutLine: {'line': b'-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.500181] (-) TimerEvent: {}
+[0.551448] (sim) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.556651] (sim) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.564772] (sim) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.575917] (sim) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.590795] (sim) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.600287] (-) TimerEvent: {}
+[0.663302] (sim) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.669231] (sim) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.700382] (-) TimerEvent: {}
+[0.800624] (-) TimerEvent: {}
+[0.833928] (sim) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.864558] (sim) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.900735] (-) TimerEvent: {}
+[0.909353] (sim) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.926684] (sim) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.993065] (sim) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.993275] (sim) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.000750] (-) TimerEvent: {}
+[1.059051] (sim) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.059951] (sim) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.100832] (-) TimerEvent: {}
+[1.128028] (sim) StdoutLine: {'line': b'-- Found vtvl_msgs: 0.0.0 (/root/rocket-sim/install/vtvl_msgs/share/vtvl_msgs/cmake)\n'}
+[1.150828] (sim) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.201192] (-) TimerEvent: {}
+[1.204970] (sim) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.205158] (sim) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/root/rocket-sim/src/sim/include>\n'}
+[1.205230] (sim) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.205602] (sim) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.206509] (sim) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.206565] (sim) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.206802] (sim) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.207626] (sim) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.220744] (sim) StdoutLine: {'line': b'-- Generating done\n'}
+[1.225424] (sim) StdoutLine: {'line': b'-- Build files have been written to: /root/rocket-sim/build/sim\n'}
+[1.249169] (sim) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sim_dynamics\x1b[0m\n'}
+[1.258651] (sim) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/sim_dynamics.dir/src/sim_dynamics.cpp.o\x1b[0m\n'}
+[1.301280] (-) TimerEvent: {}
+[1.401525] (-) TimerEvent: {}
+[1.501781] (-) TimerEvent: {}
+[1.602014] (-) TimerEvent: {}
+[1.702248] (-) TimerEvent: {}
+[1.802502] (-) TimerEvent: {}
+[1.902778] (-) TimerEvent: {}
+[2.003040] (-) TimerEvent: {}
+[2.103294] (-) TimerEvent: {}
+[2.203556] (-) TimerEvent: {}
+[2.303831] (-) TimerEvent: {}
+[2.404113] (-) TimerEvent: {}
+[2.504413] (-) TimerEvent: {}
+[2.604749] (-) TimerEvent: {}
+[2.705042] (-) TimerEvent: {}
+[2.805357] (-) TimerEvent: {}
+[2.905636] (-) TimerEvent: {}
+[3.006198] (-) TimerEvent: {}
+[3.106808] (-) TimerEvent: {}
+[3.207062] (-) TimerEvent: {}
+[3.307335] (-) TimerEvent: {}
+[3.407610] (-) TimerEvent: {}
+[3.507875] (-) TimerEvent: {}
+[3.608138] (-) TimerEvent: {}
+[3.708419] (-) TimerEvent: {}
+[3.808683] (-) TimerEvent: {}
+[3.908955] (-) TimerEvent: {}
+[4.009234] (-) TimerEvent: {}
+[4.109514] (-) TimerEvent: {}
+[4.209781] (-) TimerEvent: {}
+[4.310051] (-) TimerEvent: {}
+[4.410332] (-) TimerEvent: {}
+[4.510606] (-) TimerEvent: {}
+[4.610886] (-) TimerEvent: {}
+[4.711145] (-) TimerEvent: {}
+[4.811406] (-) TimerEvent: {}
+[4.911695] (-) TimerEvent: {}
+[5.011976] (-) TimerEvent: {}
+[5.112241] (-) TimerEvent: {}
+[5.212514] (-) TimerEvent: {}
+[5.313145] (-) TimerEvent: {}
+[5.413427] (-) TimerEvent: {}
+[5.513720] (-) TimerEvent: {}
+[5.614021] (-) TimerEvent: {}
+[5.714273] (-) TimerEvent: {}
+[5.814541] (-) TimerEvent: {}
+[5.914807] (-) TimerEvent: {}
+[6.015072] (-) TimerEvent: {}
+[6.115337] (-) TimerEvent: {}
+[6.215600] (-) TimerEvent: {}
+[6.315880] (-) TimerEvent: {}
+[6.416144] (-) TimerEvent: {}
+[6.516427] (-) TimerEvent: {}
+[6.616691] (-) TimerEvent: {}
+[6.716965] (-) TimerEvent: {}
+[6.817223] (-) TimerEvent: {}
+[6.917489] (-) TimerEvent: {}
+[7.017764] (-) TimerEvent: {}
+[7.118028] (-) TimerEvent: {}
+[7.218296] (-) TimerEvent: {}
+[7.318559] (-) TimerEvent: {}
+[7.418832] (-) TimerEvent: {}
+[7.519091] (-) TimerEvent: {}
+[7.619307] (-) TimerEvent: {}
+[7.719484] (-) TimerEvent: {}
+[7.819653] (-) TimerEvent: {}
+[7.919870] (-) TimerEvent: {}
+[8.020159] (-) TimerEvent: {}
+[8.120454] (-) TimerEvent: {}
+[8.220755] (-) TimerEvent: {}
+[8.236579] (sim) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable sim_dynamics\x1b[0m\n'}
+[8.320873] (-) TimerEvent: {}
+[8.421544] (-) TimerEvent: {}
+[8.521833] (-) TimerEvent: {}
+[8.557472] (sim) StdoutLine: {'line': b'[100%] Built target sim_dynamics\n'}
+[8.567237] (sim) CommandEnded: {'returncode': 0}
+[8.567711] (sim) JobProgress: {'identifier': 'sim', 'progress': 'install'}
+[8.568041] (sim) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/rocket-sim/build/sim'], 'cwd': '/root/rocket-sim/build/sim', 'env': OrderedDict([('HOSTNAME', 'ank-Victus-by-HP-Gaming-Laptop-15-fb0xxx'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/rocket-sim/install/vtvl_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/root/rocket-sim'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/root/rocket-sim/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/rocket-sim/install/vtvl_msgs:/root/rocket-sim/install/sim:/opt/ros/humble'), ('PWD', '/root/rocket-sim/build/sim'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/rocket-sim/install/vtvl_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/rocket-sim/install/vtvl_msgs:/root/rocket-sim/install/sim:/opt/ros/humble')]), 'shell': False}
+[8.574829] (sim) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.575219] (sim) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[8.575448] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/lib/sim/sim_dynamics\n'}
+[8.575606] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/ament_index/resource_index/package_run_dependencies/sim\n'}
+[8.575760] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/ament_index/resource_index/parent_prefix_path/sim\n'}
+[8.575905] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/sim/environment/ament_prefix_path.sh\n'}
+[8.576027] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/sim/environment/ament_prefix_path.dsv\n'}
+[8.576161] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/sim/environment/path.sh\n'}
+[8.576279] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/sim/environment/path.dsv\n'}
+[8.576394] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/sim/local_setup.bash\n'}
+[8.576507] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/sim/local_setup.sh\n'}
+[8.576625] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/sim/local_setup.zsh\n'}
+[8.576851] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/sim/local_setup.dsv\n'}
+[8.576971] (sim) StdoutLine: {'line': b'-- Symlinking: /root/rocket-sim/install/sim/share/sim/package.dsv\n'}
+[8.585123] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/ament_index/resource_index/packages/sim\n'}
+[8.585267] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/sim/cmake/simConfig.cmake\n'}
+[8.585379] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/sim/cmake/simConfig-version.cmake\n'}
+[8.585520] (sim) StdoutLine: {'line': b'-- Up-to-date symlink: /root/rocket-sim/install/sim/share/sim/package.xml\n'}
+[8.587132] (sim) CommandEnded: {'returncode': 0}
+[8.596756] (sim) JobEnded: {'identifier': 'sim', 'rc': 0}
+[8.597266] (-) EventReactorShutdown: {}
