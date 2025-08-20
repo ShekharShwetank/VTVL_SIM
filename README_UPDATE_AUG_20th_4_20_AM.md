@@ -1,4 +1,4 @@
-# README — VTOL Rocket Simulator (progress snapshot)
+## README — VTOL Rocket Simulator (progress snapshot)
 
 ## Status — implemented so far
 
