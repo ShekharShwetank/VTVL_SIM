@@ -1,1 +1,0 @@
-/root/rocket-sim/build/vtvl_msgs/rosidl_generator_py/vtvl_msgs/msg/_vehicle_state.py

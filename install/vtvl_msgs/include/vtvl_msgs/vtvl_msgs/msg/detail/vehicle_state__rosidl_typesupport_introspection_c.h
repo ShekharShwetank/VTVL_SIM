@@ -1,1 +1,0 @@
-/root/rocket-sim/build/vtvl_msgs/rosidl_typesupport_introspection_c/vtvl_msgs/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h

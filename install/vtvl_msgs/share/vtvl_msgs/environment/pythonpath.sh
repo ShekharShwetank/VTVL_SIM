@@ -1,1 +1,0 @@
-/root/rocket-sim/build/vtvl_msgs/ament_cmake_environment_hooks/pythonpath.sh

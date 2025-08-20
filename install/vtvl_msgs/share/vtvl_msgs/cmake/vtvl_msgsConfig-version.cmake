@@ -1,1 +1,0 @@
-/root/rocket-sim/build/vtvl_msgs/ament_cmake_core/vtvl_msgsConfig-version.cmake

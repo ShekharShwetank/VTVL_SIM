@@ -1,1 +1,0 @@
-/root/rocket-sim/build/vtvl_msgs/rosidl_generator_cpp/vtvl_msgs/msg/detail/vehicle_state__traits.hpp

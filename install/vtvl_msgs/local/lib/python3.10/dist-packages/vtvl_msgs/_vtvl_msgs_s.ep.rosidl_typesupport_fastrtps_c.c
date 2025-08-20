@@ -1,1 +1,0 @@
-/root/rocket-sim/build/vtvl_msgs/rosidl_generator_py/vtvl_msgs/_vtvl_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
